@@ -11,7 +11,7 @@
         <b-card>
           <div slot="header">
             <span class="card-title">{{ question.subject.name }}</span>
-            <b-badge variant="success" class="float-right">{{ `${actual + 1}/${total}` }}</b-badge>
+            <b-badge variant="success" class="float-right align">{{ `${actual + 1}/${total}` }}</b-badge>
           </div>
 
           <span class="question">{{ actual + 1 }}. {{ question.description }}</span>
@@ -97,6 +97,10 @@ export default {
     padding: 100px 0;
   }
 
+  .align{
+    font-size: 15px;
+    margin-top: 5px;
+  }
   .pointer {
     cursor: pointer;
   }
@@ -121,6 +125,7 @@ export default {
   .txt {
     display: inline-block;
     vertical-align: middle;
+    line-height: 18px;
   }
 
   .radio {
@@ -131,7 +136,8 @@ export default {
     display: inline-block;
     position: relative;
     vertical-align: middle;
-    margin-right: 5px;
+    margin-right: 10px;
+    line-height: 18px;
   }
 
   input[type="radio"] {
