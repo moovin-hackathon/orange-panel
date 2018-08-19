@@ -17,11 +17,19 @@
 </template>
 
 <script>
+  import { mapActions } from 'vuex'
 
 export default {
   methods: {
-    redirectToChallenger () {
+    ...mapActions('questions', [
+      'fetchQuestions'
+    ]),
+    async redirectToChallenger () {
+      await this.fetchQuestions({
+        options: this.options
+      })
 
+      this.$router.push('/quiz')
     },
     redirectToPersonalize () {
       this.$router.push('/personalize')

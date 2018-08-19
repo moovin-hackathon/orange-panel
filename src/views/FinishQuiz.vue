@@ -25,7 +25,7 @@
         <b-card no-body class="bg-info">
           <b-card-body class="pb-0">
             <div class="margin">
-              <p>Nota/Média</p>
+              <p>Nota</p>
               <h4 class="mb-0">{{ report.average }}</h4>
             </div>
           </b-card-body>

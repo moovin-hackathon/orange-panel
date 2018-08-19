@@ -24,7 +24,7 @@
 
       <b-col sm="6" v-show="show">
         <b-form-group>
-          <label>Quantidade de questões</label>
+          <label>Quantidade máxima de questões</label>
           <b-form-input v-model="options.totalQuestions"/>
         </b-form-group>
       </b-col>

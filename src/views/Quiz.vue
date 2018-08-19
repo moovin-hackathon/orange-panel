@@ -1,19 +1,26 @@
 <template>
   <div class="animated fadeIn" v-if="question">
+    <b-row class="margin-bottom">
+      <b-col md="12">
+        <b-progress :value="actual" :max="total"></b-progress>
+      </b-col>
+    </b-row>
+
     <b-row>
       <b-col sm="12">
         <b-card>
           <div slot="header">
-            {{ question.subject.name }}
-            <b-badge variant="success" class="float-right">{{ `${this.actual + 1}/${this.total}` }}</b-badge>
+            <span class="card-title">{{ question.subject.name }}</span>
+            <b-badge variant="success" class="float-right">{{ `${actual + 1}/${total}` }}</b-badge>
           </div>
-          {{ question.description }}
+
+          <span class="question">{{ actual + 1 }}. {{ question.description }}</span>
 
           <div class="margin-top">
-            <label v-for="answer in question.answers" :key="answer.id" class="d-block pointer">
+            <label v-for="(answer, index) in question.answers" :key="answer.id" class="d-block pointer">
               <input type="radio" v-model="question.answerSelected" :value="answer.id">
               <span class="radio"></span>
-              <span class="txt">{{ answer.description }}</span>
+              <span class="txt">{{ letters[index]}}) {{ answer.description }}</span>
             </label>
           </div>
         </b-card>
@@ -26,7 +33,7 @@
       </b-col>
 
       <b-col md="2" offset="8">
-        <b-button block variant="success" @click="next()" v-if="actual !== (total - 1)">Avançar</b-button>
+        <b-button block variant="success" @click="next()" :disabled="!question.answerSelected" v-if="actual !== (total - 1)">Avançar</b-button>
         <b-button block variant="success" @click="done()" v-else>Finalizar</b-button>
       </b-col>
     </b-row>
@@ -40,7 +47,7 @@ export default {
   data: () => ({
     question: null,
     actual: 0,
-    teste: null
+    letters: ['a', 'b', 'c', 'd', 'e']
   }),
   mounted () {
     if (!this.questions.length) {
@@ -96,6 +103,19 @@ export default {
 
   .margin-top {
     margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .question {
+    font-size: 18px;
+  }
+
+  .margin-bottom {
+    margin-bottom: 16px;
   }
 
   .txt {
