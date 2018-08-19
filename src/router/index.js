@@ -6,57 +6,65 @@ const DefaultContainer = () => import('@/containers/DefaultContainer')
 
 // Views
 const Dashboard = () => import('@/views/Dashboard')
+const Questions = () => import('@/views/Questions')
+const Personalize = () => import('@/views/Personalize')
+const Quiz = () => import('@/views/Quiz')
+const FinishQuiz = () => import('@/views/FinishQuiz')
 
-const Colors = () => import('@/views/theme/Colors')
-const Typography = () => import('@/views/theme/Typography')
 
-const Charts = () => import('@/views/Charts')
-const Widgets = () => import('@/views/Widgets')
+
+
+
+const Colors = () => import('@/views2/theme/Colors')
+const Typography = () => import('@/views2/theme/Typography')
+
+const Charts = () => import('@/views2/Charts')
+const Widgets = () => import('@/views2/Widgets')
 
 // Views - Components
-const Cards = () => import('@/views/base/Cards')
-const Forms = () => import('@/views/base/Forms')
-const Switches = () => import('@/views/base/Switches')
-const Tables = () => import('@/views/base/Tables')
-const Tabs = () => import('@/views/base/Tabs')
-const Breadcrumbs = () => import('@/views/base/Breadcrumbs')
-const Carousels = () => import('@/views/base/Carousels')
-const Collapses = () => import('@/views/base/Collapses')
-const Jumbotrons = () => import('@/views/base/Jumbotrons')
-const ListGroups = () => import('@/views/base/ListGroups')
-const Navs = () => import('@/views/base/Navs')
-const Navbars = () => import('@/views/base/Navbars')
-const Paginations = () => import('@/views/base/Paginations')
-const Popovers = () => import('@/views/base/Popovers')
-const ProgressBars = () => import('@/views/base/ProgressBars')
-const Tooltips = () => import('@/views/base/Tooltips')
+const Cards = () => import('@/views2/base/Cards')
+const Forms = () => import('@/views2/base/Forms')
+const Switches = () => import('@/views2/base/Switches')
+const Tables = () => import('@/views2/base/Tables')
+const Tabs = () => import('@/views2/base/Tabs')
+const Breadcrumbs = () => import('@/views2/base/Breadcrumbs')
+const Carousels = () => import('@/views2/base/Carousels')
+const Collapses = () => import('@/views2/base/Collapses')
+const Jumbotrons = () => import('@/views2/base/Jumbotrons')
+const ListGroups = () => import('@/views2/base/ListGroups')
+const Navs = () => import('@/views2/base/Navs')
+const Navbars = () => import('@/views2/base/Navbars')
+const Paginations = () => import('@/views2/base/Paginations')
+const Popovers = () => import('@/views2/base/Popovers')
+const ProgressBars = () => import('@/views2/base/ProgressBars')
+const Tooltips = () => import('@/views2/base/Tooltips')
 
 // Views - Buttons
-const StandardButtons = () => import('@/views/buttons/StandardButtons')
-const ButtonGroups = () => import('@/views/buttons/ButtonGroups')
-const Dropdowns = () => import('@/views/buttons/Dropdowns')
-const BrandButtons = () => import('@/views/buttons/BrandButtons')
+const StandardButtons = () => import('@/views2/buttons/StandardButtons')
+const ButtonGroups = () => import('@/views2/buttons/ButtonGroups')
+const Dropdowns = () => import('@/views2/buttons/Dropdowns')
+const BrandButtons = () => import('@/views2/buttons/BrandButtons')
 
 // Views - Icons
-const Flags = () => import('@/views/icons/Flags')
-const FontAwesome = () => import('@/views/icons/FontAwesome')
-const SimpleLineIcons = () => import('@/views/icons/SimpleLineIcons')
-const CoreUIIcons = () => import('@/views/icons/CoreUIIcons')
+const Flags = () => import('@/views2/icons/Flags')
+const FontAwesome = () => import('@/views2/icons/FontAwesome')
+const SimpleLineIcons = () => import('@/views2/icons/SimpleLineIcons')
+const CoreUIIcons = () => import('@/views2/icons/CoreUIIcons')
 
 // Views - Notifications
-const Alerts = () => import('@/views/notifications/Alerts')
-const Badges = () => import('@/views/notifications/Badges')
-const Modals = () => import('@/views/notifications/Modals')
+const Alerts = () => import('@/views2/notifications/Alerts')
+const Badges = () => import('@/views2/notifications/Badges')
+const Modals = () => import('@/views2/notifications/Modals')
 
 // Views - Pages
-const Page404 = () => import('@/views/pages/Page404')
-const Page500 = () => import('@/views/pages/Page500')
-const Login = () => import('@/views/pages/Login')
-const Register = () => import('@/views/pages/Register')
+const Page404 = () => import('@/views2/pages/Page404')
+const Page500 = () => import('@/views2/pages/Page500')
+const Login = () => import('@/views2/pages/Login')
+const Register = () => import('@/views2/pages/Register')
 
 // Users
-const Users = () => import('@/views/users/Users')
-const User = () => import('@/views/users/User')
+const Users = () => import('@/views2/users/Users')
+const User = () => import('@/views2/users/User')
 
 Vue.use(Router)
 
@@ -75,6 +83,31 @@ export default new Router({
           path: 'dashboard',
           name: 'Dashboard',
           component: Dashboard
+        },
+        {
+          path: 'history',
+          name: 'history',
+          component: History
+        },
+        {
+          path: 'questions',
+          name: 'questions',
+          component: Questions
+        },
+        {
+          path: 'personalize',
+          name: 'personalize',
+          component: Personalize
+        },
+        {
+          path: 'quiz',
+          name: 'quiz',
+          component: Quiz
+        },
+        {
+          path: 'finishQuiz',
+          name: 'finishQuiz',
+          component: FinishQuiz
         },
         {
           path: 'theme',

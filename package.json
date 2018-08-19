@@ -1,19 +1,17 @@
 {
-  "name": "@coreui/coreui-free-vue-admin-template",
-  "version": "2.0.0-beta.13",
-  "description": "Open Source Bootstrap Admin Template",
-  "author": "Łukasz Holeczek",
-  "homepage": "http://coreui.io",
-  "copyright": "Copyright 2018 creativeLabs Łukasz Holeczek",
-  "license": "MIT",
+  "name": "moovin-hackathon-orange-panel",
+  "version": "1.0.0",
   "scripts": {
     "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e"
   },
   "dependencies": {
+    "vuex": "^3.0.1",
+    "axios": "^0.17.1",
     "@coreui/coreui": "^2.0.4",
     "@coreui/coreui-plugin-chartjs-custom-tooltips": "^1.2.0",
     "@coreui/icons": "0.2.0",

@@ -3,6 +3,7 @@
 import 'core-js/es6/promise'
 import 'core-js/es6/string'
 import 'core-js/es7/array'
+import store from './store'
 // import cssVars from 'css-vars-ponyfill'
 import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
@@ -18,6 +19,7 @@ Vue.use(BootstrapVue)
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: {
     App
